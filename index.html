@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <section class="hero" id="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>¡Hola! Soy <span class="highlight">Benjamín Arévalos</span></h1>
+                <p>Desarrollador web apasionado por crear experiencias digitales únicas y funcionales.</p>
+            </div>
+            <div class="hero-image">
+                <div class="hero-image-frame">
+                    <img src="img/fotoMe2.png" alt="Tu nombre">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="about" id="about">
+        <div class="about-container"><!--  -->
+            <div class="about-image">
+                <div class="about-image-frame">
+                    <img src="img/fotoSec2.png" alt="Tu nombre trabajando">
+                </div>
+            </div>
+            <div class="about-content">
+                <h2>Sobre mí</h2>
+                <div class="about-text">
+                    <p class="about-intro">Soy programador con sólidos conocimientos en HTML, CSS, JavaScript y SQL.</p>
+                    <p class="about-description">Apasionado por la tecnología, con gran capacidad de aprendizaje y enfoque en la mejora continua. Comprometido, trabajador y orientado a la resolución de problemas para desarrollar soluciones eficientes.</p>
+                </div>
+                <div class="skills">
+                    <div class="skill-tag">JavaScript</div>
+                    <div class="skill-tag">HTML</div>
+                    <div class="skill-tag">CSS</div>
+                    <div class="skill-tag">SQL</div>
+                    <div class="skill-tag">UI/UX</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="certificates" id="certificates">
+        <h2>Mis Certificaciones</h2>
+        <div class="carousel-container">
+            <button class="carousel-button prev">&#10094;</button>
+            <div class="carousel">
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="img/Certificado1.png" alt="Certificado Creación de Páginas Web" onclick="openImageViewer(this.src, this.alt)">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>Creación de Páginas Web</h3>
+                        <span class="certificate-date">Enero 2025</span>
+                        <p>Desarrollo de páginas web, con varias herramientas, como HTML, CSS, JavaScript y Wordpress.</p>
+                    </div>
+                </div>
+                
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="img/certificado2.PNG" alt="Certificado de SQL" onclick="openImageViewer(this.src, this.alt)">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>Introduction to SQL</h3>
+                        <span class="certificate-date">Noviembre 2024</span>
+                        <p>Planificación y desarrollo de bases de datos robustas con SQLite, MySQL y PostgrestSQL. Análisis de datos.</p>
+                    </div>
+                </div>
+                
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="img/certificado3.PNG" alt="Certificado de Creación de Videos" onclick="openImageViewer(this.src, this.alt)">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>Creación de Videos</h3>
+                        <span class="certificate-date">Septiembre 2024</span>
+                        <p>Planificación de videos, como su guión, tipos de guionesy sus herramientas. Creación y edición de videos.</p>
+                    </div>
+                </div>
+                
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="img/certificado4.PNG" alt="Certificado de Portugués" onclick="openImageViewer(this.src, this.alt)">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>Portugués Técnico</h3>
+                        <span class="certificate-date">Septiembre 2024</span>
+                        <p>Aprendizaje de portugués técnico para atención al cliente con énfasis en Hotelería.</p>
+                    </div>
+                </div>
+                
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="img/certificado5.PNG" alt="Certificado de Digitaliza tu Negocio" onclick="openImageViewer(this.src, this.alt)">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>Digitaliza tu Negocio</h3>
+                        <span class="certificate-date">Agosto 2024</span>
+                        <p>Digitalizar un negocio por medio de las herramientas digitales de Google.</p>
+                    </div>
+                </div>
+                
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="img/certificado6.PNG" alt="Certificado de Marketing Digital" onclick="openImageViewer(this.src, this.alt)">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>Marketing Digital</h3>
+                        <span class="certificate-date">Agosto 2024</span>
+                        <p>Planificación y creación de marketing digital para empresas, con el objetivo de conseguir más clientes y ventas.</p>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="img/certificado7.PNG" alt="Certificado de Python Essentials" onclick="openImageViewer(this.src, this.alt)">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>Python Essentials 2</h3>
+                        <span class="certificate-date">Agosto 2024</span>
+                        <p>Aprendizaje profundo sobre los fundamentos de Python para programación profesional.</p>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="img/certificado8.PNG" alt="Certificado de Python Essentials" onclick="openImageViewer(this.src, this.alt)">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>Python Essentials 1</h3>
+                        <span class="certificate-date">Junio 2024</span>
+                        <p>Aprendizaje de los fundamentos y los métodos y herramientas básicas para crear aplicaciones con Python.</p>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="img/certificado27.PNG" alt="Certificado de English for Career" onclick="openImageViewer(this.src, this.alt)">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>English for Career</h3>
+                        <span class="certificate-date">Mayo 2024</span>
+                        <p>Inglés para carreras profesionales.</p>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="img/certificado9.PNG" alt="Certificado de Programacion con Python" onclick="openImageViewer(this.src, this.alt)">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>Programación con Python</h3>
+                        <span class="certificate-date">Abril 2024</span>
+                        <p>Aprendizaje de los fundamentos de Python.</p>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="img/certificado26.PNG" alt="Certificado de Curso Profesional de C++" onclick="openImageViewer(this.src, this.alt)">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>C++ Profesional</h3>
+                        <span class="certificate-date">Marzo 2024</span>
+                        <p>Conocimiento profesional sobre los algoritmos del lenguaje de programación C++.</p>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="img/certificado10.PNG" alt="Certificado de Programación en Python" onclick="openImageViewer(this.src, this.alt)">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>Programación en Python</h3>
+                        <span class="certificate-date">Febrero 2024</span>
+                        <p>Aprendizaje de los fundamentos de Python y de la programación.</p>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="img/certificado11.PNG" alt="Certificado de Programador Orientado a Objetos" onclick="openImageViewer(this.src, this.alt)">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>POO</h3>
+                        <span class="certificate-date">Febrero 2024</span>
+                        <p>Aprendizaje de los fundamentos y de la lógica de programación para la programación orientada a objetos.</p>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="img/certificado12.PNG" alt="Certificado de Cloud Computing" onclick="openImageViewer(this.src, this.alt)">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>Cloud Computing</h3>
+                        <span class="certificate-date">Diciembre 2023</span>
+                        <p>Aprendizaje del uso del Cloud Computing para el trabajo y su uso útil en las empresas.</p>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="img/certificado13.PNG" alt="Certificado de Ciberseguridad en el Teletrabajo" onclick="openImageViewer(this.src, this.alt)">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>Ciberseguridad en el Trabajo</h3>
+                        <span class="certificate-date">Diciembre 2023</span>
+                        <p>Aprendizaje de ciberseguridad para la protección online de empresas y trabajadores.</p>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="img/certificado14.PNG" alt="Certificado de Transformación Digital para el Trabajo" onclick="openImageViewer(this.src, this.alt)">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>Trabajo Digital</h3>
+                        <span class="certificate-date">Diciembre 2023</span>
+                        <p>Planificación y transformación digital para empresas y trabajadores.</p>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="img/certificado15.PNG" alt="Certificado de Curador de Datos" onclick="openImageViewer(this.src, this.alt)">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>Curador de Datos</h3>
+                        <span class="certificate-date">Noviembre 2023</span>
+                        <p>Aprendizaje de los fundamentos de las bases de datos y de la curación de los datos para su uso en estadística.</p>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="img/certificado16.PNG" alt="Certificado de Desarrollo Web 2" onclick="openImageViewer(this.src, this.alt)">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>Desarrollo Web 2</h3>
+                        <span class="certificate-date">Noviembre 2023</span>
+                        <p>Aprendizaje de los fundamentos de HTML, CSS y JavaScript para crear Webs.</p>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="img/certificado17.PNG" alt="Certificado de Desarrollo Web 1" onclick="openImageViewer(this.src, this.alt)">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>Desarrollo Web 1</h3>
+                        <span class="certificate-date">Noviembre 2023</span>
+                        <p>Aprendizaje de los fundamentos básicos de HTML y CSS.</p>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="img/certificado18.PNG" alt="Certificado de Contenido Digital" onclick="openImageViewer(this.src, this.alt)">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>Contenido Digital</h3>
+                        <span class="certificate-date">Noviembre 2023</span>
+                        <p>Aprendizaje de las distintas herramientas y de las maneras de crear contenido digital.</p>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="img/certificado19.PNG" alt="Certificado de Diploma en Integridad Web" onclick="openImageViewer(this.src, this.alt)">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>Integridad Web</h3>
+                        <span class="certificate-date">Octubre 2023</span>
+                        <p>Diploma sobre el marketing, UI, la accesibilidad para los usuarios, y demás contenido relacionado a la Web.</p>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="img/certificado20.PNG" alt="Certificado de Gestor de Imagen Web" onclick="openImageViewer(this.src, this.alt)">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>Imagen Web</h3>
+                        <span class="certificate-date">Octubre 2023</span>
+                        <p>Todo sobre la interfaz y accesibilidad del usuario a la página web.</p>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="img/certificado21.PNG" alt="Certificado de Tester" onclick="openImageViewer(this.src, this.alt)">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>Tester</h3>
+                        <span class="certificate-date">Octubre 2023</span>
+                        <p>Testeo de páginas web, aplicaciones web, aplicaciones móviles y más. Herramientas para testeo.</p>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="img/certificado22.PNG" alt="Certificado de Asistente Web" onclick="openImageViewer(this.src, this.alt)">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>Asistente Web</h3>
+                        <span class="certificate-date">Octubre 2023</span>
+                        <p>Aprendizaje de las actividades y conocimientos que deben tener los asistentes web.</p>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="img/certificado23.PNG" alt="Certificado de Cómputo Básico" onclick="openImageViewer(this.src, this.alt)">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>Cómputo Básico</h3>
+                        <span class="certificate-date">Julio 2023</span>
+                        <p>Aprendizaje de los fundamentos de la computación. Hardware, software, Sistemas Operativos y más.</p>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="img/certificado24.PNG" alt="Certificado de Finder" onclick="openImageViewer(this.src, this.alt)">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>Finder</h3>
+                        <span class="certificate-date">Enero 2021</span>
+                        <p>Búsqueda correcta de contenido para su uso para empresas y organizaciones.</p>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="img/certificado25.PNG" alt="Certificado de Agente de Ventas Digital" onclick="openImageViewer(this.src, this.alt)">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>Ventas Digital</h3>
+                        <span class="certificate-date">Enero 2020</span>
+                        <p>Herramientas y métodos de ventas digitales para empresas.</p>
+                    </div>
+                </div>
+                
+            </div>
+            <button class="carousel-button next">&#10095;</button>
+        </div>
+    </section>
+    <section class="projects" id="projects">
+        <h2>Mis Proyectos</h2>
+        <div class="projects-container">
+            <!-- Proyecto 1 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="img/gamificandoPY.PNG" alt="Gamificando PY">
+                    <div class="project-overlay">
+                        <a href="https://benjaminsvg.github.io/Gamificando-PY/" target="_blank" class="project-link">Ver Proyecto</a>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Gamificando PY</h3>
+                    <span class="project-date">Marzo a Noviembre 2024</span>
+                    <p>Plataforma repositorio que contiene descripción, video tutorial y tutorial escrito sobre juegos gamificados que se pueden usar para la educación en el Paraguay.</p>
+                </div>
+            </div>
+
+            <!-- Proyecto 2 -->
+            
+
+            <!-- Proyecto 3 -->
+            
+
+            <!-- Proyecto 4 -->
+            
+
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <h2>Contáctame</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>¿Tienes un proyecto en mente?</h3>
+                <p>Estoy disponible para nuevos proyectos. Envíame un mensaje y conversemos sobre cómo puedo ayudarte.</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:benjaminarevalos06@gmail.com" class="contact-link">benjaminarevalos06@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Asunción, Paraguay</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/benjamin-arevalos-9ab7632a1/" target="_blank" class="contact-link">LinkedIn</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/BenjaminSVG" target="_blank" class="contact-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <form class="contact-form" action="scriptphp.php" method="POST">
+                <div class="form-group">
+                    <input type="text" name="nombre" required>
+                    <label>Nombre</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" required>
+                    <label>Correo Electrónico</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="asunto" required>
+                    <label>Asunto</label>
+                </div>
+                <div class="form-group">
+                    <textarea name="mensaje" required></textarea>
+                    <label>Mensaje</label>
+                </div>
+                <button type="submit" class="submit-btn">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+    <div id="imageViewer" class="image-viewer">
+        <span class="close-viewer">&times;</span>
+        <img id="viewerImage" src="" alt="">
+        <div class="viewer-caption"></div>
+        <button class="viewer-nav prev-image">&lt;</button>
+        <button class="viewer-nav next-image">&gt;</button>
+    </div>
+    <script src="script.js"></script>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Benjamín Arévalos</h3>
+                    <p>Desarrollador web apasionado por crear experiencias digitales únicas y funcionales.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="#hero">Inicio</a></li>
+                        <li><a href="#about">Sobre mí</a></li>
+                        <li><a href="#certificates">Certificaciones</a></li>
+                        <li><a href="#projects">Proyectos</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Sígueme</h4>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/benjamin-arevalos-9ab7632a1/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/BenjaminSVG" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="mailto:benjaminarevalos06@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Benjamín Arévalos. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <button id="scrollToTop" class="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+</body>
+</html>
