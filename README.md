@@ -35,3 +35,4 @@ Este es mi portafolio web personal, diseñado y desarrollado para mostrar mis ha
 ├── fotoMe2.png
 ├── fotoSec2.png
 └── certificados/
+

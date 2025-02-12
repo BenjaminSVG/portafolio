@@ -339,6 +339,12 @@ body {
     overflow-x: hidden;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+.carousel::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
 }
 
 .certificate-card {
@@ -464,6 +470,7 @@ body {
         padding: 2rem 0;
         scroll-padding: 0 calc(50% - 140px);
         scroll-snap-type: x mandatory;
+        gap: 1rem; /* Reducido el espacio entre tarjetas en móvil */
     }
     
     .certificate-card {
@@ -476,6 +483,7 @@ body {
     
     .carousel-container {
         padding: 0 20px;
+        overflow: hidden; /* Asegura que no haya desbordamiento */
     }
     
     .carousel-button {
@@ -638,7 +646,7 @@ body {
     .projects-container {
         grid-template-columns: 1fr;
         max-width: 500px;
-        padding: 1rem;
+        padding: 0.5rem; /* Menos padding en contenedor de proyectos */
     }
     
     .project-card {
@@ -744,7 +752,7 @@ body {
     }
     
     .contact-form {
-        padding: 2rem;
+        padding: 1.5rem; /* Menos padding en el formulario */
     }
 }
 
@@ -1064,5 +1072,1240 @@ body {
     
     .viewer-caption {
         font-size: 1rem;
+    }
+}
+
+/* Ajustes adicionales para mejorar la responsividad general */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem; /* Texto más pequeño en móvil */
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .about-content h2,
+    .certificates h2,
+    .projects h2,
+    .contact h2 {
+        font-size: 2rem; /* Títulos más pequeños en móvil */
+    }
+    
+    .contact-form {
+        padding: 1.5rem; /* Menos padding en el formulario */
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 0.8rem; /* Campos de formulario más compactos */
+    }
+    
+    .projects-container {
+        padding: 0.5rem; /* Menos padding en contenedor de proyectos */
+    }
+}
+
+/* Prevenir el scroll horizontal en todo el sitio */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Estilos para la sección de idiomas */
+.languages {
+    margin-top: 2.5rem;
+}
+
+.languages h3 {
+    color: var(--color-primary);
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.language-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.language-item {
+    display: grid;
+    grid-template-columns: 100px 1fr 80px;
+    align-items: center;
+    gap: 1rem;
+}
+
+.language-name {
+    font-weight: 500;
+    color: var(--color-primary);
+}
+
+.language-level {
+    height: 8px;
+    background-color: rgba(59, 130, 246, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.level-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+    border-radius: 4px;
+    transition: width 1s ease-in-out;
+}
+
+.level-text {
+    font-size: 0.9rem;
+    color: var(--color-secondary);
+    text-align: right;
+}
+
+/* Ajustes responsive para la sección de idiomas */
+@media (max-width: 768px) {
+    .language-item {
+        grid-template-columns: 90px 1fr 70px;
+        gap: 0.8rem;
+    }
+
+    .languages h3 {
+        text-align: center;
+    }
+
+    .level-text {
+        font-size: 0.8rem;
+    }
+}
+
+/* Estilos para la sección de educación */
+.education {
+    margin-top: 3rem;
+}
+
+.education h3 {
+    color: var(--color-primary);
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+}
+
+.education-container {
+    position: relative;
+    padding-left: 0;
+}
+
+.education-item {
+    display: flex;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.education-timeline {
+    position: relative;
+    margin-right: 2rem;
+    min-width: 120px;
+}
+
+.education-year {
+    color: var(--color-secondary);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.education-content {
+    flex: 1;
+}
+
+.education-content h4 {
+    color: var(--color-primary);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.education-school {
+    color: var(--color-secondary);
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+
+.education-description {
+    color: #4b5563;
+    font-size: 0.95rem;
+}
+
+/* Animación para los elementos de educación */
+.education-item {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: calc(var(--item-index, 0) * 0.2s);
+}
+
+/* Ajustes responsive para la sección de educación */
+@media (max-width: 768px) {
+    .education {
+        margin-top: 2rem;
+    }
+
+    .education h3 {
+        text-align: center;
+    }
+
+    .education-container {
+        padding-left: 0;
+    }
+
+    .education-timeline {
+        min-width: 100px;
+        margin-right: 1.5rem;
+    }
+
+    .education-content h4 {
+        font-size: 1rem;
+    }
+
+    .education-school {
+        font-size: 0.9rem;
+    }
+
+    .education-description {
+        font-size: 0.85rem;
+    }
+}
+
+/* Media queries para diferentes dispositivos */
+@media screen and (max-width: 1024px) {
+    .hero-container,
+    .about-container,
+    .projects-container,
+    .contact-container {
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Ajustes para tablets y móviles grandes */
+    .hero-container,
+    .about-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-image-frame,
+    .about-image-frame {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .footer-links h4::after,
+    .footer-social h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    /* Ajustes para móviles */
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p,
+    .about-content p {
+        font-size: 0.9rem;
+    }
+
+    .skills {
+        gap: 0.5rem;
+    }
+
+    .skill-tag {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    /* Ajustes para la sección de idiomas */
+    .language-item {
+        grid-template-columns: 80px 1fr 60px;
+        gap: 0.5rem;
+    }
+
+    /* Ajustes para la sección de educación */
+    .education-timeline {
+        min-width: 90px;
+        margin-right: 1rem;
+    }
+
+    .education-content h4 {
+        font-size: 0.9rem;
+    }
+
+    /* Ajustes para certificados */
+    .certificate-card {
+        min-width: 280px;
+        height: 380px;
+    }
+
+    .certificate-content h3 {
+        font-size: 1rem;
+    }
+
+    /* Ajustes para el formulario de contacto */
+    .contact-form {
+        padding: 1.5rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Ajustes para el carrusel en dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .carousel {
+        padding: 1rem 0;
+        gap: 1rem;
+    }
+
+    .carousel-button {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .carousel-button.prev {
+        left: 5px;
+    }
+
+    .carousel-button.next {
+        right: 5px;
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas */
+@media screen and (max-width: 360px) {
+    .hero-content h1 {
+        font-size: 1.6rem;
+    }
+
+    .certificate-card {
+        min-width: 260px;
+        height: 360px;
+    }
+
+    .education-timeline {
+        min-width: 80px;
+    }
+
+    .contact-form {
+        padding: 1rem;
+    }
+}
+
+/* Ajustes para orientación horizontal en móviles */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: 2rem 0;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .hero-image-frame {
+        width: 60%;
+    }
+}
+
+/* Optimizaciones táctiles */
+@media (hover: none) {
+    .project-card,
+    .certificate-card,
+    .contact-form input,
+    .contact-form textarea,
+    .carousel-button {
+        -webkit-tap-highlight-color: transparent;
+    }
+}
+
+/* Mejoras en el rendimiento */
+.hero-image img,
+.about-image img,
+.project-image img,
+.certificate-image img {
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+/* Ajustes base para responsividad */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Pantallas extra grandes (>=1400px) */
+@media screen and (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+        margin: 0 auto;
+    }
+    
+    .hero-content h1 {
+        font-size: 3.5rem;
+    }
+}
+
+/* Pantallas grandes (>=1200px) */
+@media screen and (max-width: 1200px) {
+    .container {
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+    
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+/* Pantallas medianas (>=992px) */
+@media screen and (max-width: 992px) {
+    .container {
+        max-width: 960px;
+        padding: 0 1.5rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .about-container,
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .about-image-frame,
+    .hero-image-frame {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+/* Tablets (>=768px) */
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .projects-container {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .certificate-card {
+        min-width: 300px;
+    }
+    
+    .carousel {
+        padding: 1rem 0;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .language-item {
+        grid-template-columns: 90px 1fr 70px;
+    }
+    
+    .education-timeline {
+        min-width: 100px;
+    }
+}
+
+/* Móviles grandes (>=576px) */
+@media screen and (max-width: 576px) {
+    .container {
+        max-width: 540px;
+        padding: 0 1rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p,
+    .about-content p {
+        font-size: 1rem;
+    }
+    
+    .skills {
+        gap: 0.5rem;
+    }
+    
+    .skill-tag {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    .certificate-card {
+        min-width: 280px;
+    }
+    
+    .contact-form {
+        padding: 1.5rem;
+    }
+}
+
+/* Móviles pequeños (<400px) */
+@media screen and (max-width: 400px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+    
+    .skill-tag {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.8rem;
+    }
+    
+    .certificate-card {
+        min-width: 260px;
+    }
+    
+    .language-item {
+        grid-template-columns: 80px 1fr 60px;
+        gap: 0.5rem;
+    }
+    
+    .education-timeline {
+        min-width: 80px;
+    }
+    
+    .contact-form {
+        padding: 1rem;
+    }
+}
+
+/* Ajustes para orientación horizontal en móviles */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: 2rem 0;
+    }
+    
+    .hero-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .hero-image-frame {
+        width: 60%;
+    }
+}
+
+/* Optimizaciones para dispositivos táctiles */
+@media (hover: none) {
+    .project-card,
+    .certificate-card,
+    .contact-form input,
+    .contact-form textarea,
+    .carousel-button {
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    .interactive-element {
+        cursor: pointer;
+        transition: transform 0.2s ease;
+    }
+    
+    .interactive-element:active {
+        transform: scale(0.98);
+    }
+}
+
+/* Mejoras de rendimiento */
+.hero-image img,
+.about-image img,
+.project-image img,
+.certificate-image img {
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+/* Ajustes de accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Ajustes para la sección de certificaciones */
+@media screen and (max-width: 768px) {
+    .certificates h2 {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .carousel-container {
+        padding: 0 20px;
+    }
+
+    .carousel {
+        gap: 1rem;
+        padding: 1rem 0;
+        scroll-snap-type: x mandatory;
+    }
+
+    .certificate-card {
+        min-width: calc(100% - 40px);
+        max-width: 300px;
+        height: auto;
+        margin: 0 auto;
+        scroll-snap-align: center;
+    }
+
+    .certificate-image {
+        height: 200px;
+    }
+
+    .carousel-button {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+        background: rgba(255, 255, 255, 0.9);
+    }
+
+    .carousel-button.prev {
+        left: 5px;
+    }
+
+    .carousel-button.next {
+        right: 5px;
+    }
+}
+
+/* Ajustes para la sección de proyectos */
+@media screen and (max-width: 768px) {
+    .projects {
+        padding: 2rem 1rem;
+    }
+
+    .projects h2 {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .project-card {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        height: auto;
+    }
+
+    .project-image {
+        height: 200px;
+        width: 100%;
+    }
+
+    .project-content {
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    .project-overlay {
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    .project-link {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ajustes para la sección de contacto */
+@media screen and (max-width: 768px) {
+    .contact {
+        padding: 2rem 1rem;
+    }
+
+    .contact h2 {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .contact-info h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .contact-info p {
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .contact-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact-form {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+        text-align: left;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        padding: 0.8rem;
+        font-size: 16px;
+    }
+
+    .submit-btn {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+/* Ajustes adicionales para pantallas más pequeñas */
+@media screen and (max-width: 576px) {
+    .project-card {
+        max-width: 100%;
+    }
+
+    .project-image {
+        height: 180px;
+    }
+
+    .project-content {
+        padding: 1.2rem;
+    }
+
+    .contact-form {
+        padding: 1.2rem;
+    }
+}
+
+/* Ajustes para tablets */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        padding: 0 2rem;
+    }
+
+    .project-card {
+        max-width: none;
+    }
+
+    .contact-container {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+}
+
+/* Mejoras en la interactividad táctil */
+@media (hover: none) {
+    .project-link,
+    .submit-btn {
+        padding: 12px 24px;
+    }
+
+    .project-overlay {
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.6);
+    }
+}
+
+/* Ajustes para dispositivos muy pequeños (iPhone 5 y similares) */
+@media screen and (max-width: 320px) {
+    /* Ajustes generales */
+    .container {
+        padding: 0 0.8rem;
+    }
+
+    /* Hero section */
+    .hero-content h1 {
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+
+    .hero-content p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+
+    /* About section */
+    .about-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .about-content p {
+        font-size: 0.85rem;
+    }
+
+    /* Skills */
+    .skills {
+        gap: 0.3rem;
+    }
+
+    .skill-tag {
+        padding: 0.3rem 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    /* Languages */
+    .language-item {
+        grid-template-columns: 70px 1fr 50px;
+        gap: 0.3rem;
+    }
+
+    .language-name {
+        font-size: 0.8rem;
+    }
+
+    .level-text {
+        font-size: 0.75rem;
+    }
+
+    /* Education */
+    .education-timeline {
+        min-width: 70px;
+        margin-right: 0.8rem;
+    }
+
+    .education-year {
+        font-size: 0.8rem;
+    }
+
+    .education-content h4 {
+        font-size: 0.85rem;
+    }
+
+    .education-school {
+        font-size: 0.8rem;
+    }
+
+    .education-description {
+        font-size: 0.75rem;
+    }
+
+    /* Projects */
+    .project-card {
+        margin: 0;
+    }
+
+    .project-image {
+        height: 160px;
+    }
+
+    .project-content {
+        padding: 1rem;
+    }
+
+    .project-content h3 {
+        font-size: 1rem;
+    }
+
+    .project-content p {
+        font-size: 0.85rem;
+    }
+
+    .project-date {
+        font-size: 0.75rem;
+    }
+
+    .project-link {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    /* Certificates */
+    .certificate-card {
+        min-width: 240px;
+        height: auto;
+    }
+
+    .certificate-image {
+        height: 160px;
+    }
+
+    .certificate-content h3 {
+        font-size: 0.9rem;
+    }
+
+    .certificate-content p {
+        font-size: 0.8rem;
+    }
+
+    /* Contact */
+    .contact h2 {
+        font-size: 1.6rem;
+    }
+
+    .contact-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .contact-info p {
+        font-size: 0.85rem;
+    }
+
+    .contact-item {
+        font-size: 0.85rem;
+    }
+
+    .contact-form {
+        padding: 1rem;
+    }
+
+    .form-group label {
+        font-size: 0.85rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+
+    .submit-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 1.5rem 0.8rem;
+    }
+
+    .footer-brand h3 {
+        font-size: 1.2rem;
+    }
+
+    .footer-brand p {
+        font-size: 0.85rem;
+    }
+
+    .footer-links h4,
+    .footer-social h4 {
+        font-size: 1rem;
+    }
+
+    .footer-links a {
+        font-size: 0.85rem;
+    }
+
+    .social-links a {
+        font-size: 1.4rem;
+    }
+
+    .footer-bottom p {
+        font-size: 0.75rem;
+    }
+}
+
+/* Optimizaciones adicionales para dispositivos antiguos */
+@supports not (display: grid) {
+    /* Fallback para navegadores que no soportan grid */
+    .projects-container,
+    .contact-container,
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project-card,
+    .contact-info,
+    .contact-form {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Mejoras de rendimiento para dispositivos antiguos */
+@media screen and (max-width: 320px) {
+    * {
+        -webkit-text-size-adjust: 100%;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .hero-image img,
+    .about-image img,
+    .project-image img,
+    .certificate-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Reducir animaciones para mejorar rendimiento */
+    .education-item,
+    .project-card,
+    .certificate-card {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Ajustes específicos para iPhone 5s y dispositivos similares */
+@media screen and (max-width: 320px) {
+    /* Hero section ajustes */
+    .hero-container {
+        padding: 1rem 0.5rem;
+        gap: 1rem;
+    }
+
+    .hero-content {
+        padding: 0 0.5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.4rem;
+        line-height: 1.2;
+    }
+
+    .hero-image-frame {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    /* Certificaciones ajustes */
+    .certificates {
+        padding: 1.5rem 0.5rem;
+    }
+
+    .certificates h2 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    .carousel-container {
+        padding: 0 10px;
+    }
+
+    .carousel {
+        gap: 0.5rem;
+        padding: 0.5rem 0;
+    }
+
+    .certificate-card {
+        min-width: 240px;
+        max-width: 280px;
+        height: 320px;
+        margin: 0 auto;
+    }
+
+    .certificate-image {
+        height: 140px;
+    }
+
+    .certificate-content {
+        padding: 0.8rem;
+    }
+
+    .certificate-content h3 {
+        font-size: 0.85rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .certificate-content p {
+        font-size: 0.75rem;
+    }
+
+    .carousel-button {
+        width: 30px;
+        height: 30px;
+        font-size: 0.8rem;
+    }
+
+    .carousel-button.prev {
+        left: 2px;
+    }
+
+    .carousel-button.next {
+        right: 2px;
+    }
+
+    /* Ajustes adicionales para mejorar la visualización */
+    .container {
+        padding: 0 0.5rem;
+    }
+
+    section {
+        padding: 1.5rem 0;
+    }
+
+    /* Mejoras en el rendimiento */
+    .hero-image img,
+    .certificate-image img {
+        -webkit-transform: translateZ(0);
+        -moz-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        -o-transform: translateZ(0);
+        transform: translateZ(0);
+        backface-visibility: hidden;
+    }
+
+    /* Optimizaciones para el scroll del carrusel */
+    .carousel {
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .carousel::-webkit-scrollbar {
+        display: none;
+    }
+
+    .certificate-card {
+        scroll-snap-align: center;
+    }
+}
+
+/* Ajustes específicos para altura pequeña */
+@media screen and (max-height: 568px) {
+    .hero {
+        min-height: auto;
+        padding: 1rem 0;
+    }
+
+    .hero-image-frame {
+        width: 180px;
+        height: 180px;
+    }
+
+    .certificate-card {
+        height: auto;
+        min-height: 280px;
+    }
+}
+
+/* Optimizaciones para dispositivos con retina display */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hero-image img,
+    .certificate-image img {
+        image-rendering: -webkit-optimize-contrast;
     }
 }

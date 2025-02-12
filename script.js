@@ -232,3 +232,37 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// Antispam
+document.addEventListener('DOMContentLoaded', function() {
+    // Verificar si hay mensaje en la URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const mensaje = urlParams.get('mensaje');
+    
+    if (mensaje) {
+        let alertMessage = '';
+        switch(mensaje) {
+            case 'enviado':
+                alertMessage = '¡Mensaje enviado con éxito!';
+                break;
+            case 'error':
+                alertMessage = 'Error al enviar el mensaje. Por favor, intenta nuevamente.';
+                break;
+            case 'spam':
+                alertMessage = 'Por favor, espera un momento antes de enviar otro mensaje.';
+                break;
+            case 'incompleto':
+                alertMessage = 'Por favor, completa todos los campos.';
+                break;
+            case 'email_invalido':
+                alertMessage = 'Por favor, ingresa un email válido.';
+                break;
+        }
+        
+        if (alertMessage) {
+            alert(alertMessage);
+            // Limpiar el mensaje de la URL
+            window.history.replaceState({}, document.title, window.location.pathname + window.location.hash);
+        }
+    }
+});
