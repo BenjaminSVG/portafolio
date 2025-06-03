@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+    <!-- Presentacion -->
     <section class="hero" id="hero">
         <div class="hero-container">
             <div class="hero-content">
@@ -23,8 +24,9 @@
         </div>
     </section>
     
+    <!-- Sobre mi-->
     <section class="about" id="about">
-        <div class="about-container"><!--  -->
+        <div class="about-container">
             <div class="about-image">
                 <div class="about-image-frame">
                     <img src="img/fotoSec2.png" alt="Tu nombre trabajando">
@@ -126,12 +128,35 @@
         </div>
     </section>
     
+    <!-- Certificados -->
     <section class="certificates" id="certificates">
         <h2>Mis Certificaciones</h2>
         <div class="carousel-container">
             <button class="carousel-button prev">&#10094;</button>
             <div class="carousel">
-                
+
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="img/certificado29.PNG" alt="Certificado de Análisis con PowerBi" onclick="openImageViewer(this.src, this.alt)">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>Análisis e Interpretación de Datos con PowerBi</h3>
+                        <span class="certificate-date">Abril 2025</span>
+                        <p>Análisis, interpretación y visualización de datos con PowerBi.</p>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="img/certificado28.PNG" alt="Certificado de Análisis con Excel" onclick="openImageViewer(this.src, this.alt)">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>Análisis de Datos con Excel</h3>
+                        <span class="certificate-date">Abril 2025</span>
+                        <p>Análisis y creación de tablas dinámicas con Excel.</p>
+                    </div>
+                </div>
+
                 <div class="certificate-card">
                     <div class="certificate-image">
                         <img src="img/certificado1.PNG" alt="Certificado Creación de Páginas Web" onclick="openImageViewer(this.src, this.alt)">
@@ -474,6 +499,8 @@
 
         </div>
     </section>
+
+    <!-- Contacto -->
     <section class="contact" id="contact">
         <h2>Contáctame</h2>
         <div class="contact-container">
@@ -527,6 +554,33 @@
         <button class="viewer-nav prev-image">&lt;</button>
         <button class="viewer-nav next-image">&gt;</button>
     </div>
+
+    <!-- CV -->
+    <section class="cv" id="cv">
+        <h2>Currículum Vitae</h2>
+        <div class="cv-container">
+            <div class="cv-header">
+                <p>¿Quieres saber más sobre mi experiencia y habilidades?</p>
+                <p>Descarga mi CV completo en formato PDF.</p>
+            </div>
+            <div class="cv-download">
+                <a href="docs/CV-Benjamin-Arevalos.pdf" target="_blank" class="cv-button">
+                    <i class="fas fa-download"></i>
+                    Descargar CV
+                </a>
+                <p class="cv-note">(El CV se abrirá en una nueva pestaña)</p>
+            </div>
+            <div class="cv-preview">
+                <div class="cv-image">
+                    <img src="img/cv-preview.PNG" alt="Vista previa del CV">
+                    <div class="cv-overlay">
+                        <span>Vista Previa</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script src="script.js"></script>
     <footer class="footer">
         <div class="footer-container">
@@ -543,6 +597,7 @@
                         <li><a href="#certificates">Certificaciones</a></li>
                         <li><a href="#projects">Proyectos</a></li>
                         <li><a href="#contact">Contacto</a></li>
+                        <li><a href="#cv">Curriculum</a></li>
                     </ul>
                 </div>
                 <div class="footer-social">
@@ -555,7 +610,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Benjamín Arévalos. Todos los derechos reservados.</p>
+                <p>&copy; 2025 Benjamín Arévalos. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>

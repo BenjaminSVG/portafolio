@@ -2309,3 +2309,167 @@ html, body {
         image-rendering: -webkit-optimize-contrast;
     }
 }
+
+/* Estilos para la sección CV */
+.cv {
+    padding: 6rem 2rem;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    color: var(--color-light);
+}
+
+.cv h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.cv h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--color-light);
+    border-radius: 2px;
+}
+
+.cv-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.cv-header {
+    text-align: center;
+    max-width: 600px;
+}
+
+.cv-header p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.cv-download {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cv-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--color-light);
+    color: var(--color-primary);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cv-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cv-note {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.cv-preview {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 2rem;
+}
+
+.cv-image {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cv-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.cv-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.cv-image:hover .cv-overlay {
+    opacity: 1;
+}
+
+.cv-overlay span {
+    color: var(--color-light);
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.8rem 1.5rem;
+    border: 2px solid var(--color-light);
+    border-radius: 25px;
+}
+
+/* Ajustes responsive para la sección CV */
+@media screen and (max-width: 768px) {
+    .cv {
+        padding: 4rem 1rem;
+    }
+
+    .cv h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .cv-header p {
+        font-size: 1rem;
+    }
+
+    .cv-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .cv-preview {
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cv h2 {
+        font-size: 1.8rem;
+    }
+
+    .cv-button {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .cv-preview {
+        max-width: 250px;
+    }
+}
