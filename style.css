@@ -2745,3 +2745,73 @@ html, body {
     background: white;
     color: var(--color-primary);
 }
+
+.navbar {
+    position: fixed;
+    top: -100px;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: top 0.3s ease;
+    z-index: 1000;
+}
+
+.navbar.visible {
+    top: 0;
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+}
+
+.navbar-cta {
+    text-decoration: none;
+    color: var(--color-primary);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar-cta:hover {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    color: white;
+}
+
+.navbar-space {
+    width: 50px;
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        padding: 0.8rem 1rem;
+    }
+
+    .navbar-logo {
+        font-size: 1.5rem;
+    }
+
+    .navbar-cta {
+        font-size: 0.9rem;
+    }
+}
